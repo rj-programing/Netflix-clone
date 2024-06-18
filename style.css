@@ -4,7 +4,6 @@
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
-    box-sizing: border-box;
 }
 
 body {
@@ -18,7 +17,7 @@ body {
     background-position: center center;
     object-fit: contain;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: max(1600px, 100vw);
 }
 
 .main .box {
@@ -33,7 +32,7 @@ body {
 nav {
     display: flex;
     align-items: center;
-    max-width: 90vw;
+    max-width: 70vw;
     justify-content: space-between;
     margin: auto;
     height: 66px;
@@ -64,22 +63,24 @@ nav button {
     position: relative;
     gap: 23px;
     padding: 0 30px;
-    text-align: center;
 }
 
 .hero> :nth-child(1) {
     font-weight: 900;
     font-size: 48px;
+    text-align: center;
 }
 
 .hero> :nth-child(2) {
     font-weight: 400;
     font-size: 24px;
+    text-align: center;
 }
 
 .hero> :nth-child(3) {
     font-weight: 400;
     font-size: 20px;
+    text-align: center;
 }
 
 .separation {
@@ -102,12 +103,13 @@ nav button {
     align-items: center;
     justify-content: center;
     gap: 16px;
-    flex-wrap: wrap;
 }
 
 .btn-red-sm {
     background-color: red;
     color: white;
+    position: relative;
+    left: 20px;
     border: none;
     font-weight: 500;
 }
@@ -130,34 +132,27 @@ nav button {
     border: 1px solid rgba(147, 135, 135, 0.5);
     color: white;
     font-weight: 400;
-    width: 100%;
 }
 
 .first {
     display: flex;
-    flex-direction: column;
-    max-width: 90vw;
+    max-width: 75vw;
     margin: auto;
     color: white;
     justify-content: center;
     align-items: center;
     padding: 70px 0px;
-    text-align: center;
-}
-
-.first>div {
-    margin-bottom: 20px;
 }
 
 .secImage {
     position: relative;
-    width: 100%;
-    max-width: 555px;
-    margin: auto;
 }
 
 .secImage img {
-    width: 100%;
+    width: 555px;
+    position: relative;
+    z-index: 10;
+    top: 12px;
 }
 
 .secImage video {
@@ -168,15 +163,32 @@ nav button {
     width: 100%;
 }
 
+.first>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.first>div> :nth-child(1) {
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.first>div> :nth-child(2) {
+    font-family: "Poppins", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
 .secImage1 {
     position: relative;
-    width: 100%;
-    max-width: 30vw;
-    margin: auto;
 }
 
 .secImage1 img {
-    width: 100%;
+    width: 30vw;
+    position: relative;
+    z-index: 10;
+    top: 12px;
 }
 
 .secImage1 video {
@@ -191,7 +203,9 @@ nav button {
     color: white;
     font-size: 48px;
     text-align: center;
-    margin: 30px 0 60px;
+    position: relative;
+    top: 30px;
+    margin-bottom: 60px;
 }
 
 .faq-box {
@@ -199,13 +213,12 @@ nav button {
     background-color: #323131;
     padding: 34px;
     color: white;
-    max-width: 90vw;
+    max-width: 60vw;
     margin: 10px auto;
     font-size: 24px;
     justify-content: space-between;
     transition: 0.3s;
     cursor: pointer;
-    align-items: center;
 }
 
 .faq-box>svg {
@@ -222,6 +235,7 @@ nav button {
 .hero .lastspan {
     font-weight: 500;
     font-size: 20px;
+    text-align: center;
     margin-top: 50px;
 }
 
@@ -233,7 +247,6 @@ nav button {
     border: 1px solid rgba(147, 135, 135, 0.5);
     color: white;
     font-weight: 400;
-    width: 100%;
 }
 
 .hsecond {
@@ -242,10 +255,9 @@ nav button {
 
 footer {
     color: white;
-    max-width: 90vw;
+    max-width: 70vw;
     margin: auto;
     text-align: left;
-    padding: 20px 0;
 }
 
 .footer {
@@ -258,13 +270,13 @@ footer {
 .footer-items {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .footer-items a {
-    color: rgba(255, 255, 255, 0.7);
+    color: white;
     text-decoration: none;
     margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-items a:hover {
@@ -276,7 +288,6 @@ footer span {
     margin-top: 20px;
     display: block;
     margin-bottom: 20px;
-    text-align: center;
 }
 
 /* Responsive Design */
@@ -313,18 +324,5 @@ footer span {
 
     .footer-items a {
         margin-bottom: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero input {
-        width: calc(100% - 30px);
-    }
-
-    .btn-red {
-        width: calc(100% - 30px);
     }
 }
